@@ -1,6 +1,7 @@
 let color = "black";
 let click = true;
 
+//Populates the Grid
 function populateBoard(size){
  let board = document.querySelector(".board");
  board.style.gridTemplateColumns = `repeat(${size}, 1fr)`
@@ -18,6 +19,12 @@ function populateBoard(size){
 
 populateBoard(16);
 
+//New grid 
+let newGridButton = document.querySelector("#new-grid");
+newGridButton.addEventListener('click', function() {
+    changeSize(newSize.value);
+})
+
 function changeSize(input){
     if (input >=2 && input <=100){
         let squares = document.querySelectorAll("div .div-squares");
@@ -29,6 +36,7 @@ function changeSize(input){
     }
 }
 
+//Function for RGB colors
 function colorSquare() {
     if (click) {
       if(color === 'random') {
@@ -39,18 +47,31 @@ function colorSquare() {
  }
 }
 
+//Range bar & display
+let newSize = document.querySelector("#new-size");
+newSize.value = 16;
+let displaySize = document.querySelector("#size-label");
+displaySize.textContent = newSize.value;
+newSize.addEventListener('mousemove', function() {
+    displaySize.textContent = newSize.value
+})
+
+
+
 function changeColor(choice) {
     color = choice;
 }
 
+//Clears the board
 function resetBoard(){
     let board = document.querySelector(".board");
     let squares = document.querySelectorAll("div .div-squares");
         squares.forEach((div) => div.style.backgroundColor = "white");W
 }
 
-document.querySelector('body').addEventListener("click", (e) => {
-    if(e.target.tagName != "BUTTON"){
+//Coloring Mode
+document.querySelector('.board').addEventListener("click", (e) => {
+    if(e.target.className != "board"){
     click = !click
     if(click){
         document.querySelector(".mode").textContent = "Mode: Coloring"

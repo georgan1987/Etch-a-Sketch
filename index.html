@@ -6,29 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa Slab One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Iceland">
     <title>Etc-A-Sketch</title>
 </head>
 
 <body>
     <div class="flex-container">
         <div class="title">
-            <h1>Etc-A-Sketch Sketchpad</h1>
+            <h1>Etc-A-Sketch</h1>
         </div>
-        <div class="mode">Mode: Coloring</div>
 
         <div class="content">
-            <div class="board"></div>
-            <div class="buttons">
-                <button onclick="changeColor('black')">Black</button>
-                <button onclick="changeColor('white')">Erasor</button>
-                <button onclick="changeColor('grey')">Gray</button> 
-                <button onclick="changeColor('random')">Random</button>
-                <button onclick="resetBoard()">Reset</button>
+
+            <div class="left-content">
+                <div class="mode">Mode: Coloring</div>
+
+              <div class="buttons">
+                  <button onclick="changeColor('black')">Black</button>
+                  <button onclick="changeColor('white')">Erasor</button>
+                  <button onclick="changeColor('grey')">Gray</button> 
+                  <button onclick="changeColor('random')">Random</button>
+                  <button onclick="resetBoard()">Clear</button>
+              </div>
+
+              <div class="range-bar-button">
+                <div class="range-bar">
+                  <input id="new-size" type="range" min="2" max="100" value="16"/>
+                  <label id="size-label"></label>
+                </div>
+    
+                  <button id="new-grid">New grid size</button>
+              </div>
             </div>
-              <input type="text" placeholder="Size of the Board" value="16" onchange="changeSize(this.value)" />
-              <button>Set size</button>
+             
+              <div class="board"></div>
         </div>
     </div>
+
+    <footer class="footer">
+        <p>
+            Copyright ©
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            georgan1987
+            <a href="https://github.com/georgan1987"><img src="./GitHub-Mark-32px.png" alt="GitHub Logo" class="git-pic">    </a>
+        </p>
+    
+    </footer>
     
 </body>
 <script src="app.js"></script>
