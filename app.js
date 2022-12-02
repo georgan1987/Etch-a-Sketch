@@ -74,9 +74,29 @@ document.querySelector('.board').addEventListener("click", (e) => {
     if(e.target.className != "board"){
     click = !click
     if(click){
-        document.querySelector(".mode").textContent = "Mode: Coloring"
+        document.querySelector(".mode-not-coloring").textContent = "";
+        document.querySelector(".mode-coloring").textContent = "Coloring"
     } else {
-        document.querySelector(".mode").textContent = "Mode: Not Coloring"
+        document.querySelector(".mode-not-coloring").textContent = "Not Coloring";
+        document.querySelector(".mode-coloring").textContent = ""  
     }
   }
 });
+
+//Function:Random Color
+let colorText = document.querySelector(".mode-coloring");
+
+function getRandomColor(){
+    let letters = '0123456789ABCDEF';
+    let colour = '#';
+    for (let i=0; i <6; i++) {
+        colour += letters[Math.floor(Math.random()*16)];
+    }
+    return colour;
+}
+
+function changeColor(){
+    colorText.style.color = getRandomColor();
+}
+
+setInterval(changeColor,700);

@@ -1,8 +1,13 @@
+/* Main Board */
 .board{
     display:grid;
-    width: 60vh;
-    height: 60vh;
+    width: 65vh;
+    height: 65vh;
     border: 1px rgba(0, 0, 0, 0.404) solid;
+    margin-top: 1vh;
+    margin-right: 6vh;
+    box-sizing: content-box;
+
 }
 
 .div-squares{
@@ -14,6 +19,7 @@
     background-color: #1381ad !important;
 }
 
+/* Header */
 .title{
     display: flex;
     background-color: #31748f;
@@ -39,7 +45,41 @@ body{
 .content{
     padding: 40px 100px;
     display: flex;
-    gap: 250px;
+    justify-content: center;
+    gap: 200px;
+}
+
+.coloring-text{
+    display: flex;
+    flex-direction: row;
+}
+/* New Grid Button */
+#new-grid{
+    display: block;
+    background-color: #f25602;
+}
+
+#new-grid:hover {
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.199);
+    background-color: #500d04;
+    color: white;
+    border: 1px solid #c6c6c6;
+    text-decoration: none;
+    transition: all .3s ease;
+    color: #d9f3ed;
+}
+
+#new-grid:active {
+    border: 1px solid #300a0a;
+    transition: all 0s ease;
+    background-color: #7bcfb3;
+    color: white;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.199);
+}
+
+#new-size{
+    width: 16vw;
+    margin-bottom: 10px;
 }
 
 .left-content{
@@ -48,10 +88,45 @@ body{
     justify-content: space-around;
 }
 
+.mode, .mode-coloring, .mode-not-coloring{
+    font-family: "Iceland";
+    font-size: 40px;
+}
+
+button{
+    background-color: #3ba1c9;
+    color: rgb(0, 0, 0);
+    border-radius: 24px;
+    border: 1px solid white;
+    width: 18vw;
+    height: 3vh;
+}
+
+button:hover {
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.199);
+    background-color: #042b50;
+    color: white;
+    border: 1px solid #c6c6c6;
+    text-decoration: none;
+    transition: all .3s ease;
+    color: #d9f3ed;
+}
+button:active {
+    border: 1px solid #300a0a;
+    transition: all 0s ease;
+    background-color: #7bcfb3;
+    color: white;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.199);
+}
+
 .buttons{
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+#clear-button{
+    margin-top: 50px;
 }
 
 .range-bar{
@@ -65,18 +140,21 @@ body{
 .range-bar-button{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
 }
 
 #size-label{
-    font-family: "Iceland"
+    font-family: "Iceland";
+    margin-bottom: 10px;
 }
 
+
+/* Footer */
 footer{
     bottom: 0;
     display: flex;
     background: #1381ad;
-    color: #f25602;
+    color: #f85903;
     font-family: "Iceland";
     font-size: 20px;
     justify-content: center;
