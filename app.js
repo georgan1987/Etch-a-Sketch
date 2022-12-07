@@ -26,14 +26,9 @@ newGridButton.addEventListener('click', function() {
 })
 
 function changeSize(input){
-    if (input >=2 && input <=100){
         let squares = document.querySelectorAll("div .div-squares");
         squares.forEach((div) => div.remove());
-        populateBoard(input)
-    }
-    else{
-        console.log("Put a number between 2 and 100")
-    }
+        populateBoard(input);
 }
 
 //Function for RGB colors
@@ -66,7 +61,7 @@ function changeColor(choice) {
 function resetBoard(){
     let board = document.querySelector(".board");
     let squares = document.querySelectorAll("div .div-squares");
-        squares.forEach((div) => div.style.backgroundColor = "white");W
+        squares.forEach((div) => div.style.backgroundColor = "white");
 }
 
 //Coloring Mode
@@ -83,7 +78,7 @@ document.querySelector('.board').addEventListener("click", (e) => {
   }
 });
 
-//Function:Random Color
+//Function:Random Color for Coloring mode
 let colorText = document.querySelector(".mode-coloring");
 
 function getRandomColor(){
@@ -95,8 +90,8 @@ function getRandomColor(){
     return colour;
 }
 
-function changeColor(){
+function flashRandomColor(){
     colorText.style.color = getRandomColor();
 }
 
-setInterval(changeColor,700);
+setInterval(flashRandomColor,700);
