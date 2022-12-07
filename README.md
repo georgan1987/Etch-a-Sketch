@@ -19,7 +19,8 @@ This is a fun Etc-A-Sketch game, from the [The Odin Project](https://www.theodin
 * Git and Github
 
 ## Outcome
-* Improved code structure and code readability - Improved clean code writing
-* Improved my knowledge on JavaScript 
-* Deepened the knowledge of DOM Manipulation 
-* Improved CSS Grid understanding and usage
+* Improved code structure and code readability
+* Improved **clean code** writing
+* Improved my knowledge on **JavaScript** 
+* Deepened the knowledge of **DOM Manipulation** 
+* Improved **CSS Grid** understanding and usage
