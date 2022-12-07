@@ -59,7 +59,6 @@ function changeColor(choice) {
 
 //Clears the board
 function resetBoard(){
-    let board = document.querySelector(".board");
     let squares = document.querySelectorAll("div .div-squares");
         squares.forEach((div) => div.style.backgroundColor = "white");
 }
